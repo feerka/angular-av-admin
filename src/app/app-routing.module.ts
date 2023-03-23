@@ -1,8 +1,8 @@
+import { AuthRoutingModule } from './auth/auth.routing';
 import { PagesRoutingModule } from './pages/pages.routing';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
-import { AuthRoutingModule } from './auth/auth.routing';
 
 const routes: Routes = [
 
@@ -18,7 +18,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     PagesRoutingModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    RouterModule
   ],
   exports:[RouterModule]
 })
